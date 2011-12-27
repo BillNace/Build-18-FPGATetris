@@ -1,0 +1,15 @@
+FPGA Tetris, a part of the 2012 Build18 Festival
+
+Team Members
+  Paul Kennedy
+  Bill Nace
+  Ross Daly
+
+Project Description
+  We will build Tetris using logic design concepts (Hardware threads, 18-240 
+    Lab 3b) on an Altera FPGA, using a Terasic DE2-115 board.
+  There will be no software in our solution.
+  We will investigate using different FPGA tools and boards than are currently 
+    used in 18-240 or 18-545. We will use the Altera DE2-115 board and the 
+    Altera Quartis toolset.
+  Input will be from a keyboard or controller. Output will be to a VGA monitor.
