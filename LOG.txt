@@ -1,0 +1,12 @@
+Logging some random stuff that might be helpful
+
+8 Jan 2012: WAN
+  Got windows laptop installed, and perhaps running.
+    USB-Blaster didn't install properly right away.  I had to find it in the 
+    Device Manager (it wasn't under USB, but under "Other Devices")
+    
+  Got Git and GitHub set up
+    Downloaded Git
+    Followed install directions at GitHub
+    Cloned repository to ~
+    s
