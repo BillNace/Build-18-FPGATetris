@@ -75,10 +75,16 @@ module Build18FPGATetris(
   tetris t(tetris_red, tetris_green, tetris_blue, col, row, CLOCK_50, KEY);
   
   logic [7:0] gol_red, gol_green, gol_blue;
-  assign gol_red   = 8'h00;  // GOL Module goes here
-  assign gol_green = 8'hC0;
-  assign gol_blue  = 8'hFF;
-  
+  logic [23:0] game_of_life_rgb;
+  assign gol_red = game_of_life_rgb[23:16];
+  assign gol_green = game_of_life_rgb[15:8];
+  assign gol_blue  = game_of_life_rgb[7:0];
+
+  gol_top(.clk(CLOCK50), .rst_b(KEY[0]), 
+          .abs_ptrR(row[9:0]), .abs_ptrC(col[9:0]),
+          .game_of_life_rgb);
+
+
   logic [7:0] snake_red, snake_green, snake_blue;
   assign snake_red   = 8'hFF;  // Snake module goes here
   assign snake_green = 8'h00;
