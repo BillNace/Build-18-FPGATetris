@@ -48,43 +48,56 @@ module Build18FPGATetris(
   // Generate inputs to VGA module
   logic [9:0] red, green, blue;
   mux8 #(8) mux_red(  .out(red[9:2]),
-                      .in0(testbars_red), .in1(8'h00), .in2(8'h20), .in3(8'h40), .in4(8'h60), 
-						    .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
+                      .in0(testbars_red), .in1(gol_red), .in2(snake_red), .in3(tetris_red), 
+							 .in4(8'h60), .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
 						    .select(SW[2:0]));
   assign red[1:0] = 2'b00;
   mux8 #(8) mux_green(.out(green[9:2]),
-                      .in0(testbars_green), .in1(8'h00), .in2(8'h20), .in3(8'h40), .in4(8'h60), 
-						    .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
+                      .in0(testbars_green), .in1(gol_green), .in2(snake_green), .in3(tetris_green), 
+							 .in4(8'h60), .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
 						    .select(SW[2:0]));
   assign green[1:0] = 2'b00;
   mux8 #(8) mux_blue( .out(blue[9:2]),
-                      .in0(testbars_blue), .in1(8'h00), .in2(8'h20), .in3(8'h40), .in4(8'h60), 
-						    .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
+                      .in0(testbars_blue), .in1(gol_blue), .in2(snake_blue), .in3(tetris_blue), 
+							 .in4(8'h60), .in5(8'h80), .in6(8'hC0), .in7(8'hFF),
 						    .select(SW[2:0]));
   assign blue[1:0] = 2'b00;
 
 
-  logic [7:0]testbars_red, testbars_green, testbars_blue;
+  logic [7:0] testbars_red, testbars_green, testbars_blue;
 
   assign testbars_red[7]   =   col >= 10'd320;
   assign testbars_green[7] = ((col >= 10'd160) && (col < 10'd320)) || ((col >= 10'd480) && (col < 10'd640));
   assign testbars_blue[7]  = ((col >= 10'd80)  && (col < 10'd160)) || ((col >= 10'd240) && (col < 10'd320)) || 
                     ((col >= 10'd400) && (col < 10'd480)) || ((col >= 10'd560) && (col < 10'd640));
   
-VGA vga( 
-  .iRed(red),
-  .iGreen(green),
-  .iBlue(blue),
-  .oCurrent_X(col),
-  .oCurrent_Y(row),
-  .oVGA_R(VGA10_R),
-  .oVGA_G(VGA10_G),
-  .oVGA_B(VGA10_B),
-  .oVGA_HS(VGA_HS),
-  .oVGA_VS(VGA_VS),
-  .oVGA_BLANK(VGA_BLANK_N),
-  .oVGA_CLOCK(VGA_CLK),
-  .iCLK_50M(CLOCK_50),
-  .iRST_N(KEY[0]) );
+  logic [7:0] tetris_red, tetris_green, tetris_blue;
+  tetris t(tetris_red, tetris_green, tetris_blue, col, row, CLOCK_50, KEY);
+  
+  logic [7:0] gol_red, gol_green, gol_blue;
+  assign gol_red   = 8'h00;  // GOL Module goes here
+  assign gol_green = 8'hC0;
+  assign gol_blue  = 8'hFF;
+  
+  logic [7:0] snake_red, snake_green, snake_blue;
+  assign snake_red   = 8'hFF;  // Snake module goes here
+  assign snake_green = 8'h00;
+  assign snake_blue  = 8'h00;
+  
+  VGA vga( 
+    .iRed(red),
+    .iGreen(green),
+    .iBlue(blue),
+    .oCurrent_X(col),
+    .oCurrent_Y(row),
+    .oVGA_R(VGA10_R),
+    .oVGA_G(VGA10_G),
+    .oVGA_B(VGA10_B),
+    .oVGA_HS(VGA_HS),
+    .oVGA_VS(VGA_VS),
+    .oVGA_BLANK(VGA_BLANK_N),
+    .oVGA_CLOCK(VGA_CLK),
+    .iCLK_50M(CLOCK_50),
+    .iRST_N(SW[17]) );
 
 endmodule: Build18FPGATetris

@@ -7,7 +7,7 @@ module tetris (
   input  logic        CLOCK_50,
   input  logic [3:0]  KEY);
   
-  assign tetris_red   = row[10:3];
+  assign tetris_red   = row[10:3]; //temp
   assign tetris_green = row[10:3];
   assign tetris_blue  = col[10:3];
   
