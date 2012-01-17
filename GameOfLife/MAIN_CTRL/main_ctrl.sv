@@ -76,32 +76,32 @@ module main_ctrl(
   `DQFF(run_mode,run_mode_next,1'b0)
 
   //clear_cmd
-  `DQFF(ctrl_cmds.clear_cmd, keys.c, 'h0)
+  `DQFF(ctrl_cmds.clear_cmd, keys.c[0], 'h0)
 
   //rand_cmd
-  `DQFF(ctrl_cmds.rand_cmd, keys.r, 'h0)
+  `DQFF(ctrl_cmds.rand_cmd, keys.r[0], 'h0)
 
   //pattern_mode only during EDIT
   assign pattern_mode_next = `NEXT_PRESSED(keys.p,ctrl_cmds.pattern_mode);
   `DQFF(ctrl_cmds.pattern_mode,pattern_mode_next, 1'b0)
   //next_pattern only assert if pattern_mode
-  `DQFF(ctrl_cmds.next_pattern, (keys.plus & ctrl_cmds.pattern_mode), 'h0)
+  `DQFF(ctrl_cmds.next_pattern, (keys.plus[0] & ctrl_cmds.pattern_mode), 'h0)
 
   //set cursor if f or d
-  `DQFF(ctrl_cmds.set_curs, (keys.f | keys.d), 'h0)
+  `DQFF(ctrl_cmds.set_curs, (keys.f[0] | keys.d[0]), 'h0)
 
   //curs wish ... 1 if f, 0 if d
-  `DQFF(ctrl_cmds.curs_wish, keys.f, 'h0)
+  `DQFF(ctrl_cmds.curs_wish, keys.f[0], 'h0)
 
   //one_gen 
-  `DQFF(ctrl_cmds.one_gen, keys.enter, 'h0)
+  `DQFF(ctrl_cmds.one_gen, keys.enter[0], 'h0)
 
   assign s_pressed_next = `NEXT_PRESSED(keys.s,s_pressed);
   `DQFF(s_pressed,s_pressed_next,1'b0)
 
   // inc/dec speed
-  `DQFF(ctrl_cmds.inc_speed, (s_pressed & keys.up), 'h0)
-  `DQFF(ctrl_cmds.dec_speed, (s_pressed & keys.down), 'h0)
+  `DQFF(ctrl_cmds.inc_speed, (s_pressed & keys.up[0]), 'h0)
+  `DQFF(ctrl_cmds.dec_speed, (s_pressed & keys.down[0]), 'h0)
 
   // lshift key
   assign lshift_pressed_next = `NEXT_PRESSED(keys.lshift,lshift_pressed);
@@ -114,8 +114,8 @@ module main_ctrl(
   assign z_pressed_next = `NEXT_PRESSED(keys.z,z_pressed);
   `DQFF(z_pressed,z_pressed_next,1'b0)
 
-  assign zoom_in_en = z_pressed & keys.up & (win_numCells != ZOOM_MIN);
-  assign zoom_out_en = z_pressed & keys.down & (win_numCells != ZOOM_MAX);
+  assign zoom_in_en = z_pressed & keys.up[0] & (win_numCells != ZOOM_MIN);
+  assign zoom_out_en = z_pressed & keys.down[0] & (win_numCells != ZOOM_MAX);
   assign win_numCells_zoom = zoom_in_en ? {1'b0,win_numCells[7:1]} : 
                             (zoom_out_en ? {win_numCells[6:0],1'b0} : win_numCells);
   `DQFF(win_numCells,win_numCells_zoom,ZOOM_MIN)
@@ -124,10 +124,10 @@ module main_ctrl(
 
   assign en_move = ~z_pressed & ~s_pressed;
   // arrow keys move
-  `DQFF(wc_cmds.move_up, (en_move & keys.up), 'h0)
-  `DQFF(wc_cmds.move_down, (en_move & keys.down), 'h0)
-  `DQFF(wc_cmds.move_left, (en_move & keys.left), 'h0)
-  `DQFF(wc_cmds.move_right, (en_move & keys.right), 'h0)
+  `DQFF(wc_cmds.move_up, (en_move & keys.up[0]), 'h0)
+  `DQFF(wc_cmds.move_down, (en_move & keys.down[0]), 'h0)
+  `DQFF(wc_cmds.move_left, (en_move & keys.left[0]), 'h0)
+  `DQFF(wc_cmds.move_right, (en_move & keys.right[0]), 'h0)
 
 
   // set speed of keyboard based on win_numCells;

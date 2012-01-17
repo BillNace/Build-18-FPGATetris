@@ -33,12 +33,14 @@ module title_object(
  *  0x10 < ptrR < 0x80
  *  0x10 < ptrC < 0x3f0
  */
+  assign tit_loc = 10'h20 ;
   assign ptrR_low = {1'b0,abs_ptrR} - 11'h20;
   assign ptrC_low = {1'b0,abs_ptrC} - 11'h20;
   assign ptrR_high_en = (10'h60 > abs_ptrR);
   assign ptrC_high_en = (10'h260 > abs_ptrC);
   assign tit_en_p0 = ~ptrR_low[10] & ~ptrC_low[10] &
                       ptrR_high_en & ptrC_high_en;
+  assign tit_gfx_en = tit_en_p0;
   assign ptrR = ptrR_low[5:0];
   assign ptrC = ptrC_low[9:0];
 

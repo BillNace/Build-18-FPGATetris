@@ -23,8 +23,6 @@ module gol_top(clk, rst_b, abs_ptrR, abs_ptrC, game_of_life_rgb);
   assign ps2_pkt_DH = 8'h0;
   assign rec_ps2_pkt = 1'b0;
 
-  assign abs_ptrR = 'h9;
-  assign abs_ptrC = 'h6;
   assign game_of_life_rgb = gol_gfx_en ? gol_rgb : (text_gfx_en ? text_rgb : `GREEN);
   assign game_of_life_en = gol_gfx_en | text_gfx_en ;
 

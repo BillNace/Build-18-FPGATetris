@@ -1,0 +1,2278 @@
+Quartus II 32-bit
+Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
+15
+1588
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+mux8
+# storage
+db|Build18FPGATetris.(1).cnf
+db|Build18FPGATetris.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|users|ross|build18|library.sv
+ad615f3ab3c2c84c2e3e448bf5833a98
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+W
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mux8:mux_red
+mux8:mux_green
+mux8:mux_blue
+}
+# macro_sequence
+
+# end
+# entity
+tetris
+# storage
+db|Build18FPGATetris.(2).cnf
+db|Build18FPGATetris.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|users|ross|build18|tetris|tetris.sv
+6cf12e28f5ec30739f98d7d2339a3a7f
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+tetris:t
+}
+# macro_sequence
+
+# end
+# entity
+ps2_parse
+# storage
+db|Build18FPGATetris.(4).cnf
+db|Build18FPGATetris.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ps2|ps2_parse.sv
+e43f3793a99865f962424c9afb1af8e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|ps2_parse:ps2_parse1
+}
+# macro_sequence
+
+# end
+# entity
+gol_logic
+# storage
+db|Build18FPGATetris.(10).cnf
+db|Build18FPGATetris.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+kPow
+16
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic
+}
+# macro_sequence
+
+# end
+# entity
+cellSquare
+# storage
+db|Build18FPGATetris.(11).cnf
+db|Build18FPGATetris.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+kPow
+16
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP
+}
+# macro_sequence
+
+# end
+# entity
+k_greater0
+# storage
+db|Build18FPGATetris.(12).cnf
+db|Build18FPGATetris.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+kPow
+16
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst
+}
+# macro_sequence
+
+# end
+# entity
+cellSquare
+# storage
+db|Build18FPGATetris.(13).cnf
+db|Build18FPGATetris.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+3
+PARAMETER_SIGNED_DEC
+USR
+kPow
+8
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11
+}
+# macro_sequence
+
+# end
+# entity
+k_greater0
+# storage
+db|Build18FPGATetris.(14).cnf
+db|Build18FPGATetris.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+3
+PARAMETER_SIGNED_DEC
+USR
+kPow
+8
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+}
+# macro_sequence
+
+# end
+# entity
+cellSquare
+# storage
+db|Build18FPGATetris.(15).cnf
+db|Build18FPGATetris.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+2
+PARAMETER_SIGNED_DEC
+USR
+kPow
+4
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+}
+# macro_sequence
+
+# end
+# entity
+k_greater0
+# storage
+db|Build18FPGATetris.(16).cnf
+db|Build18FPGATetris.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+2
+PARAMETER_SIGNED_DEC
+USR
+kPow
+4
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+}
+# macro_sequence
+
+# end
+# entity
+cellSquare
+# storage
+db|Build18FPGATetris.(17).cnf
+db|Build18FPGATetris.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+1
+PARAMETER_SIGNED_DEC
+USR
+kPow
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+}
+# macro_sequence
+
+# end
+# entity
+k_greater0
+# storage
+db|Build18FPGATetris.(18).cnf
+db|Build18FPGATetris.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+1
+PARAMETER_SIGNED_DEC
+USR
+kPow
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst
+}
+# macro_sequence
+
+# end
+# entity
+cellSquare
+# storage
+db|Build18FPGATetris.(19).cnf
+db|Build18FPGATetris.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+0
+PARAMETER_SIGNED_DEC
+USR
+kPow
+1
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11
+}
+# macro_sequence
+
+# end
+# entity
+k_is0
+# storage
+db|Build18FPGATetris.(20).cnf
+db|Build18FPGATetris.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell00|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell01|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell10|k_is0:cell_inst
+gol_top:GOL|gol_object:gol_object1|gol_logic:gol_logic|cellSquare:cellTOP|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_greater0:cell_inst|cellSquare:cell11|k_is0:cell_inst
+}
+# macro_sequence
+
+# end
+# entity
+text_object
+# storage
+db|Build18FPGATetris.(5).cnf
+db|Build18FPGATetris.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+text_object|text_object.sv
+da478df41c2ae68f69d4708ddcb206b
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+text_object|stats_object.sv
+944e2ee7e41a79eb8d338729d6aae6d9
+text_object|title_object.sv
+b6ed71e570eade7f52564b245b23fa9
+}
+# hierarchies {
+gol_top:GOL|text_object:text_object1
+}
+# macro_sequence
+
+# end
+# entity
+title_object
+# storage
+db|Build18FPGATetris.(6).cnf
+db|Build18FPGATetris.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+text_object|title_object.sv
+b6ed71e570eade7f52564b245b23fa9
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+gol_top:GOL|text_object:text_object1|title_object:title_object1
+}
+# macro_sequence
+
+# end
+# entity
+stats_object
+# storage
+db|Build18FPGATetris.(7).cnf
+db|Build18FPGATetris.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+text_object|stats_object.sv
+944e2ee7e41a79eb8d338729d6aae6d9
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+gol_top:GOL|text_object:text_object1|stats_object:stats_object1
+}
+# macro_sequence
+
+# end
+# entity
+main_ctrl
+# storage
+db|Build18FPGATetris.(8).cnf
+db|Build18FPGATetris.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main_ctrl|main_ctrl.sv
+8a88a82eb1b7093fd8326322176c68f
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+ZOOM_MIN
+00001000
+PARAMETER_UNSIGNED_BIN
+DEF
+ZOOM_MAX
+00010000
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|main_ctrl:main_ctrl1
+}
+# macro_sequence
+NEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endSPEED1288'b0_01_00000SPEED648'b0_01_00010SPEED328'b0_01_00101SPEED168'b0_01_01010SPEED88'b0_01_10001SPEEDDEFAULT`SPEED8SPEED88'b0_01_10001SETTYPEMATIC8'hF3
+# end
+# entity
+div
+# storage
+db|Build18FPGATetris.(30).cnf
+db|Build18FPGATetris.(30).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|comb_div.sv
+75a89933f5dc11fbd48e23a43ecac65
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+N_WIDTH
+10
+PARAMETER_SIGNED_DEC
+USR
+D_WIDTH
+7
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_display_gfx:gol_display_gfx1|cell_calculator:cell_calculator1|div:divR
+gol_top:GOL|gol_object:gol_object1|gol_display_gfx:gol_display_gfx1|cell_calculator:cell_calculator1|div:divC
+}
+# macro_sequence
+
+# end
+# entity
+gol_minimap_gfx
+# storage
+db|Build18FPGATetris.(31).cnf
+db|Build18FPGATetris.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_minimap_gfx.sv
+35bfa9d5b98782845be845ba9bfc9123
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_minimap_gfx:gol_minimap_gfx1
+}
+# macro_sequence
+RED24'hff_00_00BLUE24'h00_00_ffBLACK24'h00_00_00WHITE24'hff_ff_ffBLACK24'h00_00_00GREYa({a,a,a})
+# end
+# entity
+VGA
+# storage
+db|Build18FPGATetris.(32).cnf
+db|Build18FPGATetris.(32).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|users|ross|build18|vga.sv
+ce5238842d4b55fd19c5169cc7c99cef
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+H_FRONT
+16
+PARAMETER_SIGNED_DEC
+DEF
+H_SYNC
+96
+PARAMETER_SIGNED_DEC
+DEF
+H_BACK
+48
+PARAMETER_SIGNED_DEC
+DEF
+H_ACT
+640
+PARAMETER_SIGNED_DEC
+DEF
+H_BLANK
+160
+PARAMETER_SIGNED_DEC
+DEF
+H_TOTAL
+800
+PARAMETER_SIGNED_DEC
+DEF
+V_FRONT
+11
+PARAMETER_SIGNED_DEC
+DEF
+V_SYNC
+2
+PARAMETER_SIGNED_DEC
+DEF
+V_BACK
+31
+PARAMETER_SIGNED_DEC
+DEF
+V_ACT
+480
+PARAMETER_SIGNED_DEC
+DEF
+V_BLANK
+44
+PARAMETER_SIGNED_DEC
+DEF
+V_TOTAL
+524
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+VGA:vga
+}
+# macro_sequence
+
+# end
+# entity
+win_and_curs
+# storage
+db|Build18FPGATetris.(21).cnf
+db|Build18FPGATetris.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|win_and_curs.sv
+97c875ddc1aeb37875a7758e5eb9b2
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+INIT_WINR
+0000
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_WINC
+0000
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_CURSR
+0100
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_CURSC
+0100
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|win_and_curs:win_and_curs1
+}
+# macro_sequence
+DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   end
+# end
+# entity
+gol_ctrl
+# storage
+db|Build18FPGATetris.(22).cnf
+db|Build18FPGATetris.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1
+}
+# macro_sequence
+
+# end
+# entity
+ctrl_fsm
+# storage
+db|Build18FPGATetris.(23).cnf
+db|Build18FPGATetris.(23).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|ctrl_fsm:ctrl_fsm1
+}
+# macro_sequence
+
+# end
+# entity
+next_gen_ctrl
+# storage
+db|Build18FPGATetris.(24).cnf
+db|Build18FPGATetris.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|next_gen_ctrl:next_gen_ctrl1
+}
+# macro_sequence
+
+# end
+# entity
+addr_walkthrough
+# storage
+db|Build18FPGATetris.(25).cnf
+db|Build18FPGATetris.(25).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|addr_walkthrough:walkthrough
+}
+# macro_sequence
+
+# end
+# entity
+random_gen
+# storage
+db|Build18FPGATetris.(26).cnf
+db|Build18FPGATetris.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+SEED
+000000000000000001
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|random_gen:random_gen1
+}
+# macro_sequence
+
+# end
+# entity
+pattern_gen
+# storage
+db|Build18FPGATetris.(27).cnf
+db|Build18FPGATetris.(27).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|pattern_gen:pattern_gen1
+}
+# macro_sequence
+
+# end
+# entity
+Build18FPGATetris
+# storage
+db|Build18FPGATetris.(0).cnf
+db|Build18FPGATetris.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+build18fpgatetris.sv
+43c8d6b94e578b76f1bf8c9dc252bd34
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+text_object|stats_object.sv
+944e2ee7e41a79eb8d338729d6aae6d9
+gol_object|gol_display_gfx.sv
+27b6e78bf1c821b5a161e4ef35090b
+text_object|title_object.sv
+b6ed71e570eade7f52564b245b23fa9
+main_ctrl|main_ctrl.sv
+8a88a82eb1b7093fd8326322176c68f
+gol_object|win_and_curs.sv
+97c875ddc1aeb37875a7758e5eb9b2
+ps2|ps2_parse.sv
+e43f3793a99865f962424c9afb1af8e
+main_ctrl|gol_top.sv
+e1f7f62ae89cfa1c198a80b819f48c1e
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+gol_object|gol_object.sv
+8225716b63aef96c68e4b7ae9e0b4f7
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+gol_object|gol_minimap_gfx.sv
+35bfa9d5b98782845be845ba9bfc9123
+text_object|text_object.sv
+da478df41c2ae68f69d4708ddcb206b
+}
+# hierarchies {
+|
+}
+# macro_sequence
+GREEN24'h00_ff_00NEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endSPEED1288'b0_01_00000SPEED648'b0_01_00010SPEED328'b0_01_00101SPEED168'b0_01_01010SPEED88'b0_01_10001SPEEDDEFAULT`SPEED8SPEED88'b0_01_10001SETTYPEMATIC8'hF3DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endGREYa({a,a,a})BLACK24'h00_00_00WHITE24'hff_ff_ffRED24'hff_00_00RED24'hff_00_00BLUE24'h00_00_ffBLACK24'h00_00_00WHITE24'hff_ff_ffBLACK24'h00_00_00GREYa({a,a,a})
+# end
+# entity
+gol_top
+# storage
+db|Build18FPGATetris.(3).cnf
+db|Build18FPGATetris.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main_ctrl|gol_top.sv
+e1f7f62ae89cfa1c198a80b819f48c1e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+text_object|stats_object.sv
+944e2ee7e41a79eb8d338729d6aae6d9
+gol_object|gol_display_gfx.sv
+27b6e78bf1c821b5a161e4ef35090b
+text_object|title_object.sv
+b6ed71e570eade7f52564b245b23fa9
+main_ctrl|main_ctrl.sv
+8a88a82eb1b7093fd8326322176c68f
+gol_object|win_and_curs.sv
+97c875ddc1aeb37875a7758e5eb9b2
+ps2|ps2_parse.sv
+e43f3793a99865f962424c9afb1af8e
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+gol_object|gol_object.sv
+8225716b63aef96c68e4b7ae9e0b4f7
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+gol_object|gol_minimap_gfx.sv
+35bfa9d5b98782845be845ba9bfc9123
+text_object|text_object.sv
+da478df41c2ae68f69d4708ddcb206b
+}
+# hierarchies {
+gol_top:GOL
+}
+# macro_sequence
+GREEN24'h00_ff_00NEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endNEXT_PRESSEDkeys,val  keys[1] ? 1'b0 : (keys[0] ? 1'b0 : val)DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endDQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endSPEED1288'b0_01_00000SPEED648'b0_01_00010SPEED328'b0_01_00101SPEED168'b0_01_01010SPEED88'b0_01_10001SPEEDDEFAULT`SPEED8SPEED88'b0_01_10001SETTYPEMATIC8'hF3DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endGREYa({a,a,a})BLACK24'h00_00_00WHITE24'hff_ff_ffRED24'hff_00_00RED24'hff_00_00BLUE24'h00_00_ffBLACK24'h00_00_00WHITE24'hff_ff_ffBLACK24'h00_00_00GREYa({a,a,a})
+# end
+# entity
+gol_object
+# storage
+db|Build18FPGATetris.(9).cnf
+db|Build18FPGATetris.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_object.sv
+8225716b63aef96c68e4b7ae9e0b4f7
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+INIT_WINR
+0000000
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_WINC
+0000000
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_CURSR
+0000100
+PARAMETER_UNSIGNED_BIN
+DEF
+INIT_CURSC
+0000100
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+gol_object|gol_display_gfx.sv
+27b6e78bf1c821b5a161e4ef35090b
+gol_object|win_and_curs.sv
+97c875ddc1aeb37875a7758e5eb9b2
+gol_object|gol_ctrl.sv
+90dc885d80aed49ad6811c28821d3ab
+gol_object|gol_logic.sv
+fb446d9c98c6391e8b29a96b78f3b75e
+gol_object|gol_minimap_gfx.sv
+35bfa9d5b98782845be845ba9bfc9123
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1
+}
+# macro_sequence
+DQFFq,d,rst_val  always_ff @(posedge clk, negedge rst_b) begin     if(~rst_b) q <= rst_val;     else q <= d;   endGREYa({a,a,a})BLACK24'h00_00_00WHITE24'hff_ff_ffRED24'hff_00_00RED24'hff_00_00BLUE24'h00_00_ffBLACK24'h00_00_00WHITE24'hff_ff_ffBLACK24'h00_00_00GREYa({a,a,a})
+# end
+# entity
+gol_display_gfx
+# storage
+db|Build18FPGATetris.(28).cnf
+db|Build18FPGATetris.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_display_gfx.sv
+27b6e78bf1c821b5a161e4ef35090b
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_display_gfx:gol_display_gfx1
+}
+# macro_sequence
+GREYa({a,a,a})BLACK24'h00_00_00WHITE24'hff_ff_ffRED24'hff_00_00
+# end
+# entity
+cell_calculator
+# storage
+db|Build18FPGATetris.(29).cnf
+db|Build18FPGATetris.(29).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+gol_object|gol_display_gfx.sv
+27b6e78bf1c821b5a161e4ef35090b
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+K
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+main_ctrl|defines.sv
+e72bf2c0aeaad44392813e5217efb931
+}
+# hierarchies {
+gol_top:GOL|gol_object:gol_object1|gol_display_gfx:gol_display_gfx1|cell_calculator:cell_calculator1
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -32,6 +32,7 @@ module stats_object(
   assign ptrC_high_en = (10'h260 > abs_ptrC);
   assign sts_en_p0 = ~ptrR_low[10] & ~ptrC_low[10] &
                       ptrR_high_en & ptrC_high_en;
+  assign sts_gfx_en = sts_en_p0;
   assign ptrR = ptrR_low[8:0];
   assign ptrC = ptrC_low[8:0];
 

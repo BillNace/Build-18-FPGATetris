@@ -1,0 +1,17 @@
+
+State Machine - |Build18FPGATetris|gol_top:GOL|gol_object:gol_object1|gol_ctrl:gol_ctrl1|ctrl_fsm:ctrl_fsm1|CS
+Name CS.PATTERN CS.CLEAR_PATTERN CS.PATTERN_MODE CS.RANDOM CS.CLEAR CS.RUN CS.EDIT 
+CS.EDIT 0 0 0 0 0 0 0 
+CS.RUN 0 0 0 0 0 1 1 
+CS.CLEAR 0 0 0 0 1 0 1 
+CS.RANDOM 0 0 0 1 0 0 1 
+CS.PATTERN_MODE 0 0 1 0 0 0 1 
+CS.CLEAR_PATTERN 0 1 0 0 0 0 1 
+CS.PATTERN 1 0 0 0 0 0 1 
+
+State Machine - |Build18FPGATetris|gol_top:GOL|ps2_parse:ps2_parse1|CS
+Name CS.PARSE CS.F0 CS.E0 CS.IDLE 
+CS.IDLE 0 0 0 0 
+CS.E0 0 0 1 1 
+CS.F0 0 1 0 1 
+CS.PARSE 1 0 0 1 

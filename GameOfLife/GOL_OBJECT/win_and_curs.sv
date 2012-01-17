@@ -21,11 +21,11 @@
 // TODO need posedge detect on "run_mode" and set curs to the center of the screen
 module win_and_curs(clk, rst_b, run_mode, wc_cmds,
                     winR, winC, win_numCells, abs_cursC, abs_cursR);
-  parameter K = 6;
-  parameter INIT_WINR = 7'h0;
-  parameter INIT_WINC = 7'h0;
-  parameter INIT_CURSR = 7'h4;
-  parameter INIT_CURSC = 7'h4;
+  parameter K = 4;
+  parameter INIT_WINR = 4'h0;
+  parameter INIT_WINC = 4'h0;
+  parameter INIT_CURSR = 4'h4;
+  parameter INIT_CURSC = 4'h4;
   input clk, rst_b;
   input WC_CMDS wc_cmds;
   input run_mode; // run==1, edit==0;
@@ -156,14 +156,14 @@ module win_and_curs(clk, rst_b, run_mode, wc_cmds,
     if(zoom_in) begin
       cursR_zoom = {1'b0,cursR[K-1:1]}; // divide by 2
       cursC_zoom = {1'b0, cursC[K-1:1]}; // divide by 2
-      winR_zoom = winR + {2'b00,win_numCells[7:2]};
-      winC_zoom = winC + {2'b00,win_numCells[7:2]};
+      winR_zoom = winR + {2'b00,win_numCells[K-1:2]};
+      winC_zoom = winC + {2'b00,win_numCells[K-1:2]};
     end
     else if(zoom_out) begin
       cursR_zoom = {cursR[K-2:0],1'b0}; // multipy by 2
       cursC_zoom = {cursC[K-2:0],1'b0}; // multiply by 2
-      winR_zoom = winR - {1'b0,win_numCells[7:1]};
-      winC_zoom = winC - {1'b0,win_numCells[7:1]};
+      winR_zoom = winR - {1'b0,win_numCells[K-1:1]};
+      winC_zoom = winC - {1'b0,win_numCells[K-1:1]};
     end
     else begin
       winR_zoom = winR;
@@ -192,7 +192,7 @@ module win_and_curs(clk, rst_b, run_mode, wc_cmds,
     end
     else begin
       winR <= (zoom_en) ? winR_zoom : next_winR;
-      winR <= (zoom_en) ? winC_zoom : next_winC;
+      winC <= (zoom_en) ? winC_zoom : next_winC;
     end
   end
   
@@ -206,7 +206,7 @@ module win_and_curs(clk, rst_b, run_mode, wc_cmds,
       cursR <= win_numCells[K:1]; // center of window
       cursC <= win_numCells[K:1];
     end
-    begin
+    else begin
       cursR <= (zoom_en) ? cursR_zoom : next_cursR;
       cursC <= (zoom_en) ? cursC_zoom : next_cursC;
     end

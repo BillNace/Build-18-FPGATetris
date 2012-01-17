@@ -181,7 +181,7 @@ endmodule
 
 // Xor shift register 
 module random_gen(clk, rst_b, random_en, random_data);
-  parameter SEED = 1;
+  parameter SEED = 18'h1;
   input clk, rst_b;
   input random_en;
   output random_data;
@@ -234,7 +234,7 @@ module ctrl_fsm(
   output pattern_en);
  
 
-  enum [2:0] {RUN,
+  enum logic [2:0] {RUN,
               EDIT,
               CLEAR,
               RANDOM,

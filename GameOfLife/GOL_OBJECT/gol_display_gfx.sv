@@ -73,6 +73,8 @@ module gol_display_gfx(
   assign dsp_read_en = dsp_en_p0;
 
 
+  assign dsp_cell_addrR = cell_addrR;
+  assign dsp_cell_addrC = cell_addrC;
 // This block calculates  cell_addr and pix_addr
   cell_calculator #(K) cell_calculator1(.*);  
 
@@ -125,14 +127,14 @@ module cell_calculator(win_numCells, winR, winC, ptrR, ptrC,
   always_comb begin
     case(win_numCells[5:3])
       3'b1?? : cell_width = 7'b0001000; //256/32
-      3'b?1? : cell_width = 7'b0010000; //256/16
-      3'b??1 : cell_width = 7'b010000; //256/8
+      3'b01? : cell_width = 7'b0010000; //256/16
+      3'b001 : cell_width = 7'b010000; //256/8
       default :   cell_width = 7'b0100000; //DEFAULT
     endcase
   end
 
-  assign cell_addrR = winR + cell_addrR_pre;
-  assign cell_addrC = winR + cell_addrC_pre;
+  assign cell_addrR = winR + cell_addrR_pre[K-1:0];
+  assign cell_addrC = winR + cell_addrC_pre[K-1:0];
 
   div #(10,7) divR(ptrR,cell_width,cell_addrR_pre,pix_addrR);
   div #(10,7) divC(ptrC,cell_width,cell_addrC_pre,pix_addrC);

@@ -47,7 +47,7 @@ module gol_object(
 
   gol_logic #(K) gol_logic(.*);
   win_and_curs 
-    #(K, INIT_WINR, INIT_WINC, INIT_CURSR, INIT_CURSC) 
+    #(K) 
     win_and_curs1(.*);
 
   gol_ctrl #(K) gol_ctrl1(.*);
