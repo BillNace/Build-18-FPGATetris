@@ -133,3 +133,79 @@ module mux8
   
 endmodule: mux8
 
+module mux2
+  #(parameter W = 8)
+  (output logic [W-1:0] out,
+   input  logic [W-1:0] in0, in1,
+	input  logic         select);
+
+  assign out = (select) ? in1 : in0;
+  
+endmodule : mux2
+
+module test_mux2();
+
+  logic [7:0] in0, in1, out;
+  logic       select;
+  
+  mux2 dut(out, in0, in1, select);
+  
+  initial begin
+    in0 = 8'hCA;
+	 in1 = 8'hFE;
+	 select = 0;
+	 #5
+	 if (out == 8'hCA) $display("Passed 1");
+	 select = 1;
+	 #5
+	 if (out == 8'hFE) $display("Passed 2");
+	 $stop;
+  end
+  
+endmodule : test_mux2
+
+module is_in_box
+  #(parameter START_X = 10,
+	 parameter STOP_X  = 25,
+    parameter START_Y = 20,
+	 parameter STOP_Y  = 45,
+	 parameter WIDTH   = 11)
+  (input  logic [WIDTH-1:0] x,
+   input  logic [WIDTH-1:0] y,
+	 output logic             is_in);
+	
+  always_comb begin
+    if ((x >= START_X) && 
+	     (x <= STOP_X)  &&
+		  (y >= START_Y) &&
+		  (y <= STOP_Y))
+      is_in = 1;
+    else
+      is_in = 0;
+  end
+  
+endmodule : is_in_box
+
+module test_is_in_box();
+
+  logic [10:0] x, y;
+  logic        is_in;
+  
+  is_in_box dut1(x, y, is_in);
+  
+  initial begin
+    x = 11'd0; y = 11'd0; 
+	  #5;
+ 	  if (~is_in) $display("Passed 1");
+	  x = 11'd10;
+	  #5;
+	  if (~is_in) $display("Passed 2");
+	  y = 11'd27;
+	  #5
+	  if ( is_in) $display("Passed 3");
+	  #5
+    $stop;
+  end
+  
+  
+endmodule : test_is_in_box
