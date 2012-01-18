@@ -1,0 +1,23 @@
+To start off (creates the .git subdirectory)
+
+> git init
+
+To set up a copy of the remote repository:
+
+> git clone git://github.com/BillNace/Build-18-FPGATetris.git
+
+To add a new file to the local repository
+
+> git add Log.txt
+
+To commit my changes to the local repository
+
+> git commit -m "commit message"
+
+To communicate my changes to the remote repository
+
+> git push git@github.com:BillNace/Build-18-FPGATetris.git
+
+To get any changes from the remote repository and merge them into my local repo
+
+> git pull git://github.com/BillNace/Build-18-FPGATetris.git master
