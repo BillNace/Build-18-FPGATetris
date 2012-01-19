@@ -36,3 +36,21 @@ module test_counter();
   end
   
 endmodule : test_counter
+
+// Asynchronous load, synchronous enable
+module counter_loadable
+  #(parameter 	W = 4)
+   (input  logic clk, load,
+    input  logic enable,
+	 input  logic [W-1:0] d,
+    output logic [W-1:0] q);
+
+  always_ff @(posedge clk, posedge load) 
+    begin
+      if (load)
+        q <= d;
+      else if (enable) 
+        q <= q+1;
+    end
+
+endmodule: counter_loadable

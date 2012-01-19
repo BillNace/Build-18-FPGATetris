@@ -80,9 +80,9 @@ module Build18FPGATetris(
   assign gol_green = game_of_life_rgb[15:8];
   assign gol_blue  = game_of_life_rgb[7:0];
 
-  gol_top(.clk(CLOCK50), .rst_b(KEY[0]), 
-          .abs_ptrR(row[9:0]), .abs_ptrC(col[9:0]),
-          .game_of_life_rgb);
+//  gol_top(.clk(CLOCK50), .rst_b(KEY[0]), 
+//          .abs_ptrR(row[9:0]), .abs_ptrC(col[9:0]),
+//          .game_of_life_rgb);
 
 
   logic [7:0] snake_red, snake_green, snake_blue;
