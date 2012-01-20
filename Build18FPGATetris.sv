@@ -29,6 +29,9 @@ module Build18FPGATetris(
 );
 
   logic [10:0] row, col;
+  logic reset;
+  assign reset = SW[17];
+  
   // Testing...
   assign HEX7 = 7'b0000000;
   assign HEX6 = 7'b1111001;
@@ -72,7 +75,7 @@ module Build18FPGATetris(
                     ((col >= 10'd400) && (col < 10'd480)) || ((col >= 10'd560) && (col < 10'd640));
   
   logic [7:0] tetris_red, tetris_green, tetris_blue;
-  tetris t(tetris_red, tetris_green, tetris_blue, col, row, CLOCK_50, KEY);
+  tetris t(tetris_red, tetris_green, tetris_blue, col, row, CLOCK_50, reset, KEY, LEDR);
   
   logic [7:0] gol_red, gol_green, gol_blue;
   logic [23:0] game_of_life_rgb;
@@ -104,6 +107,6 @@ module Build18FPGATetris(
     .oVGA_BLANK(VGA_BLANK_N),
     .oVGA_CLOCK(VGA_CLK),
     .iCLK_50M(CLOCK_50),
-    .iRST_N(SW[17]) );
+    .iRST_N(reset));
 
 endmodule: Build18FPGATetris

@@ -1,6 +1,5 @@
 typedef enum logic[5:0] {
   COLOR_NONE  = 6'd0, 
-  COLOR_BLACK = 6'd1,
   COLOR_BLUE             = 6'd5, // J piece colors
   COLOR_BLUE_BEV_UP      = 6'd6, 
   COLOR_BLUE_BEV_DOWN    = 6'd7, 
@@ -35,6 +34,22 @@ typedef enum logic[5:0] {
   COLOR_RED_BEV_UP       = 6'd37,
   COLOR_RED_BEV_DOWN     = 6'd38, 
   COLOR_RED_BEV_LEFT     = 6'd39, 
-  COLOR_RED_BEV_RIGHT    = 6'd40
-  
+  COLOR_RED_BEV_RIGHT    = 6'd40,
+  COLOR_BLACK            = 6'd41,
+  COLOR_BLACK_BEV_UP     = 6'd42,
+  COLOR_BLACK_BEV_DOWN   = 6'd43,
+  COLOR_BLACK_BEV_LEFT   = 6'd44,
+  COLOR_BLACK_BEV_RIGHT  = 6'd45
   } color_t;
+  
+typedef enum logic [3:0] {
+  CELL_BLACK  = 4'd0,
+  CELL_BLUE   = 4'd1,
+  CELL_LBLUE  = 4'd2,
+  CELL_ORANGE = 4'd3,
+  CELL_YELLOW = 4'd4,
+  CELL_GREEN  = 4'd5,
+  CELL_PURPLE = 4'd6,
+  CELL_RED    = 4'd7,
+  CELL_WHITE  = 4'hF
+  } cell_color_t;

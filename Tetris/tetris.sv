@@ -5,10 +5,12 @@ module tetris (
   input  logic [10:0] col, 
   input  logic [10:0] row, 
   input  logic        CLOCK_50,
-  input  logic [3:0]  KEY);
+  input  logic        reset,
+  input  logic [3:0]  KEY,
+  output logic [17:0] LEDR);
   
-  color_t ww_color, test_block1, test_block2, test_block3, test_block4, p1, p2;
-  well_walls #(50, 120) ww(col, row, ww_color);
+  color_t well_color, test_block1, test_block2, test_block3, test_block4, p1, p2;
+  well #(50, 120) w(col, row, well_color, CLOCK_50, reset);
   bevelled_block                     j1(col, row, test_block1);
   bevelled_block #(120, 135, 36, 51) j2(col, row, test_block2);
   bevelled_block #(136, 151, 36, 51) j3(col, row, test_block3);
@@ -20,14 +22,17 @@ module tetris (
   paintable_block #(67, 82, 120, 135) l1(col, row, paint_choice, KEY[1], p1);
   
   logic [10:0] x_pos, y_pos;
+  logic clk;
   assign x_pos = 11'd120;
-  gameclock (CLK_50M, CLK_game);
-  counter_loadable #(11)(CLK_game, KEY[3], 1'b1, 11'd75, y_pos);
+  gameclock gc(clk, CLOCK_50, reset);
+  counter_loadable #(11)(clk, ~KEY[3], 1'b1, 11'd75, y_pos);
+  assign LEDR[10:0] = y_pos;
+  assign LEDR[17:11] = 7'b1011000;
   
   movable_block #(COLOR_GREEN) o1(col, row, x_pos, y_pos, p2);
   
   color_pallette cp(tetris_red, tetris_green, tetris_blue, 
-                    ww_color, 
+                    well_color, 
                     test_block1, test_block2, test_block3, test_block4,
 						  p1, p2);
   
@@ -35,19 +40,18 @@ endmodule: tetris
 
 module color_pallette
   (output logic [7:0] red, green, blue,
-   input  color_t ww_color, test_block, test_block2, test_block3, test_block4,
+   input  color_t well_color, test_block, test_block2, test_block3, test_block4,
 	input  color_t p1, p2);
   
   logic [5:0] total_color;
   logic [23:0] color_24bit;
   assign {red, green, blue}   = color_24bit;
   
-  assign total_color = ww_color | test_block | test_block2 | test_block3 | test_block4 | p1 | p2;
+  assign total_color = well_color | test_block | test_block2 | test_block3 | test_block4 | p1 | p2;
   
   always_comb begin
     case (total_color)
       COLOR_NONE    : color_24bit = 24'd0;
-      COLOR_BLACK   : color_24bit = 24'd0;
       COLOR_BLUE            : color_24bit = 24'h0000F0;
       COLOR_BLUE_BEV_DOWN   : color_24bit = 24'h000078;
       COLOR_BLUE_BEV_UP     : color_24bit = 24'hADADF2;
@@ -83,6 +87,12 @@ module color_pallette
       COLOR_RED_BEV_DOWN    : color_24bit = 24'h780000; 
       COLOR_RED_BEV_LEFT    : color_24bit = 24'hd80000; 
       COLOR_RED_BEV_RIGHT   : color_24bit = 24'hd80000;
+      COLOR_BLACK           : color_24bit = 24'd0;
+      COLOR_BLACK_BEV_UP    : color_24bit = 24'd0;
+      COLOR_BLACK_BEV_DOWN  : color_24bit = 24'd0;
+      COLOR_BLACK_BEV_LEFT  : color_24bit = 24'd0;
+      COLOR_BLACK_BEV_RIGHT : color_24bit = 24'd0;
+
       default : color_24bit = 24'd0;
     endcase
   end
